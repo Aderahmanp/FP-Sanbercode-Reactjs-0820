@@ -18,10 +18,11 @@ const Movie = ()=> {
             .then(res => {
                 setData(res.data)
             })
-           
+            .catch(err => {
+               console.log(err)
+              });
         }
-        console.log(data)
-    }, [data, setData])
+    }, [data]);
 
 
     return (
@@ -32,7 +33,6 @@ const Movie = ()=> {
             <div className="flex-detail">
                 <div><img  alt="img-game" className="card-img-detail" src={data.image_url} ></img></div>
                 <div className="deskripsi-detail" >
-                    <h3 className="release-text"></h3>
                     <p> <strong>{data.title} </strong></p>
                     <p className="year"> {data.year} </p>
                     <p> Genre :{data.genre} </p>

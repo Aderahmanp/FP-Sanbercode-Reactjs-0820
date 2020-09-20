@@ -18,6 +18,9 @@ const Movie = ()=> {
             .then(res => {
                 setMovie(res.data)
             })
+            .catch(err =>{
+                console.log(err)
+            })
            
         }
         // console.log(movie)
