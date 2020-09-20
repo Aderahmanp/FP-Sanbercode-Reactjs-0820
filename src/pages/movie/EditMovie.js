@@ -115,7 +115,7 @@ const Movie = ()=> {
     return (
        <>
       {movie !==  null && (
-           <Card  style={{ marginBottom: 8 }}>
+           <Card  className="update-card">
                <h1 className="title-edit" > Edit Movie </h1>
                <form  className="form-edit-movie" onSubmit={SubmitForm} >
                 <TextField

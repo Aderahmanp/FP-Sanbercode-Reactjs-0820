@@ -128,6 +128,7 @@ class Home extends Component {
                 })
             }
             </Row>
+            <div className="margin-home"/>
             </>
         )
     }

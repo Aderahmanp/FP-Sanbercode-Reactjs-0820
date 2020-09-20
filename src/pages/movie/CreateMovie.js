@@ -117,7 +117,7 @@ const CreateMovie = ()=> {
     }
     return (
        <>
-        <Card  style={{ marginBottom: 8 }}>
+        <Card  className="create-card">
             <h1 className="title-edit" > Create Movie </h1>
             <form  className="form-edit-movie" onSubmit={SubmitForm} >
             <TextField

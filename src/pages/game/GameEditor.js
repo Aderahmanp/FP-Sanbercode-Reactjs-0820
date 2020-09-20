@@ -16,6 +16,8 @@ const useStyles = makeStyles({
   table: {
     width: '100%',
     overflowX: 'auto',
+    marginTop :'2%',
+    marginBottom:'5%'
 
   },
 });

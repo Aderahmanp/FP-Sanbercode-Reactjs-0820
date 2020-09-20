@@ -33,7 +33,7 @@ const Headers = () => {
                   user !== null && (
                     <>
                     <Button color="inherit">
-                      <Link style={styleLinkNavbar} to="movie-editor">Movie Editor</Link>  
+                      <Link style={styleLinkNavbar} to="/Movie-Editor">Movie Editor</Link>  
                     </Button>
                     <Button color="inherit">
                       <Link style={styleLinkNavbar} to="/game-editor">Games Editor</Link>  

@@ -21,7 +21,7 @@ import {UserContext} from "../pages/UserContext"
 
 
 const Section = () => {
-    const [user, setUser] = useContext(UserContext)
+    const [user] = useContext(UserContext)
 
     const PrivateRoute = ({user, ...props}) => {
         if(user) {
@@ -42,11 +42,11 @@ const Section = () => {
                 <Route exact path="/" user={user} component={Home}/> 
                 <Route exact path="/Register" user={user} component={Register}/>
                 <LoginRoute exact path="/Login" user={user} component={Login}/> 
-                <Route exact path="/Change-Password" user={user} component={ChangePassword}/>
+                <PrivateRoute exact path="/Change-Password" user={user} component={ChangePassword}/>
                 <Route exact path="/movie/:id" user={user} component={Movie}/>
                 <Route exact path="/game/:id" user={user} component={Game}/> 
-                <PrivateRoute exact path="/movie-edit/:id" user={user} component={EditMovie}/>   
-                <PrivateRoute exact path="/movie-editor" user={user} component={MovieEditor}/>
+                <PrivateRoute exact path="/movie-edit/:id" user={user} component={EditMovie}/>  
+                <PrivateRoute exact path="/Movie-Editor" user={user} component={MovieEditor}/> 
                 <PrivateRoute exact path="/movie-create" user={user} component={CreateMovie}/>
                 <PrivateRoute exact path="/game-editor" user={user} component={GameEditor}/>
                 <PrivateRoute exact path="/game-edit/:id" user={user} component={EditGame}/> 

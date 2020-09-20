@@ -95,7 +95,7 @@ const CreateGame = ()=> {
     }
     return (
        <>
-        <Card  style={{ marginBottom: 8 }}>
+        <Card  className="create-card">
             <h1 className="title-edit" > Create Game </h1>
             <form  className="form-edit-movie" onSubmit={SubmitForm} >
             <TextField

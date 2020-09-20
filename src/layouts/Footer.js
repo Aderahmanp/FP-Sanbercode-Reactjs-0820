@@ -1,14 +1,14 @@
 import React from "react"
-import { Layout, Menu } from 'antd'
+import { Layout } from 'antd'
 
-const { Footer, Content } = Layout
+const { Footer } = Layout
 
 const Footers = () => {
 
 
     return(
         <>
-        <Footer style={{ textAlign: 'center' }}>Sanbercode ©2020 Created by Aderahmanp</Footer>
+        <Footer className="footer">Sanbercode ©2020 Created by Aderahmanp</Footer>
         </>
     )
 }

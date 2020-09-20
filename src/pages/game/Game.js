@@ -26,9 +26,10 @@ const Game = ()=> {
 
     return (
        <>
-    <h1 style={{testAlign: "center"}}>
       {data !==  null && (
-           <Card  style={{ marginBottom: 8 }}>
+          
+           <Card  className="card-detail">
+            <h1 style={{testAlign: "center"}}> Detail Game {data.name}</h1>
             <div className="flex-detail">
                 <div><img  alt="img-game" className="card-img-detail" src={data.image_url} ></img></div>
                 <div className="deskripsi-detail" >
@@ -50,7 +51,6 @@ const Game = ()=> {
            </Button>   
        </Card>
       ) }
-    </h1>
        </>
     )
 }

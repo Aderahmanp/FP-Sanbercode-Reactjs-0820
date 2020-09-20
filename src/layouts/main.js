@@ -1,13 +1,12 @@
 import React from "react"
-import { BrowserRouter as Router, Redirect } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 import Headers from './Header'
 import Section from "../layouts/section"
 import Footers from './Footer'
-
-import { Layout, Menu, Breadcrumb } from 'antd';
+import "../App.css"
+import { Layout,  } from 'antd';
 import 'antd/dist/antd.css';
 
-const { Header, Content, Footer } = Layout;
 
 
 const Main = () => {

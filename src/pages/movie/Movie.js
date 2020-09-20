@@ -26,9 +26,9 @@ const Movie = ()=> {
 
     return (
        <>
-    <h1 style={{testAlign: "center"}}>
       {data !==  null && (
-           <Card  style={{ marginBottom: 8 }}>
+           <Card className="card-detail"  >
+            <h1 style={{testAlign: "center"}}> Detail Game {data.title}</h1>
             <div className="flex-detail">
                 <div><img  alt="img-game" className="card-img-detail" src={data.image_url} ></img></div>
                 <div className="deskripsi-detail" >
@@ -54,8 +54,7 @@ const Movie = ()=> {
            </Button>   
        </Card>
       ) }
-    </h1>
-       </>
+    </>
     )
 }
 

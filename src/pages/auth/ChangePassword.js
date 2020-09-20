@@ -6,7 +6,7 @@ import {useHistory} from "react-router-dom"
 
 const ChangePassword = () => {
     let history = useHistory()
-    const [user, setUser] = useContext(UserContext)
+    const [user] = useContext(UserContext)
     const [input, setInput] = useState({current_password: "", new_password: "" , new_confirm_password: ""})
 
     const handleSubmit = (event) => {
@@ -51,7 +51,7 @@ const ChangePassword = () => {
     return(
         <>
         <form onSubmit={handleSubmit} className="form-register">
-     
+        <h1 className="title-login" > Change Password </h1>
           <TextField
             variant="outlined"
             margin="normal"
