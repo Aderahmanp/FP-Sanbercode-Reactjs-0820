@@ -60,6 +60,7 @@ const Register = () => {
     return(
         <>
         <form onSubmit={handleSubmit} className="form-register">
+        <h1 className="title-login" > Resgister </h1>
          <TextField
             variant="outlined"
             margin="normal"

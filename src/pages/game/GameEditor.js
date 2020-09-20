@@ -8,7 +8,7 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import axios from 'axios';
-import { Button } from '@material-ui/core';
+import { Button, Input } from '@material-ui/core';
 import { Link } from "react-router-dom"
 import { UserContext } from "../UserContext";
 
@@ -25,6 +25,7 @@ const useStyles = makeStyles({
 export default function MovieEditor() {
   const [games, setGames] = useState(null)
   const [user] = useContext(UserContext)
+  const [search, setSearch] = useState("")
   const classes = useStyles();
 
 
@@ -54,16 +55,36 @@ export default function MovieEditor() {
    
   }
 
-  
+  const submitSearch = (event) => {
+      event.preventDefault()
+      axios.get(`https://backendexample.sanbersy.com/api/data-game`)
+      .then(res => {
+          setGames(res.data)
+          let data = res.data
+        console.log(data)
+        let filterGame = data.filter(x=> x.name.toLowerCase().indexOf(search.toLowerCase()) !== -1)
+        setGames([...filterGame])
+      })
+
+    }
+
+
+  const handleSearch = (event) => {
+      setSearch(event.target.value)
+      console.log(event.target.value)
+  }
 
   return (
       
     <TableContainer component={Paper} className={classes.table}  >
-                    <Button  type="primary">
-                  <Link to={'/game-create'}>
-                      Create Game
-                  </Link>
-              </Button>
+    <Button  type="primary">
+        <Link to={'/game-create'}>
+            Create Game
+        </Link>
+     </Button>
+     <form className="form-serach" onSubmit={submitSearch}>
+        <Input placeholder="Search" inputProps={{ 'aria-label': 'description' }} value={search}  onChange={handleSearch} />
+    </form>
     {
         games !== null && (
       <Table  aria-label="simple table">

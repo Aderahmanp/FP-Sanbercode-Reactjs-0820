@@ -112,6 +112,7 @@ const Movie = ()=> {
                 {break;}
         }
     }
+    
     return (
        <>
       {movie !==  null && (
