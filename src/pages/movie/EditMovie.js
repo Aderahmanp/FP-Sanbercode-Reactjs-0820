@@ -27,39 +27,45 @@ const Movie = ()=> {
 
     const SubmitForm = (event) => {
         event.preventDefault()
-        axios.put(`https://backendexample.sanbersy.com/api/data-movie/${movie.id}`, { 
-            title: movie.title,
-            description:movie.description,
-            year:movie.year,
-            duration:movie.duration,
-            genre:movie.genre,
-            rating:parseInt(movie.rating),
-            image_url:movie.image_url,
-            review:movie.review
-        },{
-            headers: {
-                'Authorization' : `Bearer ${user.token}`
-            }
-        })
-        // console.log('masuk')
-        .then(res => {
-            let newMovie = movie
-            newMovie.title = movie.title
-            newMovie.description = movie.description
-            newMovie.year = movie.year
-            newMovie.duration = movie.duration
-            newMovie.genre = movie.genre
-            newMovie.rating = movie.rating
-            newMovie.image_url = movie.image_url
-            newMovie.review = movie.review
-            console.log(newMovie)
-            setMovie(newMovie)
-            history.push('/movie-editor')
-            alert("data berhasil di ubah")
-        })
-        .catch(err=>{
-            console.log(err)
-        })
+        let inputRating = movie.rating
+        if (inputRating > 0 && inputRating < 11 ) {
+            axios.put(`https://backendexample.sanbersy.com/api/data-movie/${movie.id}`, { 
+                title: movie.title,
+                description:movie.description,
+                year:movie.year,
+                duration:movie.duration,
+                genre:movie.genre,
+                rating:parseInt(movie.rating),
+                image_url:movie.image_url,
+                review:movie.review
+            },{
+                headers: {
+                    'Authorization' : `Bearer ${user.token}`
+                }
+            })
+            // console.log('masuk')
+            .then(res => {
+                let newMovie = movie
+                newMovie.title = movie.title
+                newMovie.description = movie.description
+                newMovie.year = movie.year
+                newMovie.duration = movie.duration
+                newMovie.genre = movie.genre
+                newMovie.rating = movie.rating
+                newMovie.image_url = movie.image_url
+                newMovie.review = movie.review
+                console.log(newMovie)
+                setMovie(newMovie)
+                history.push('/movie-editor')
+                alert("data berhasil di ubah")
+            })
+            .catch(err=>{
+                console.log(err)
+            })
+        } else {
+            return alert("Check kembali Rating, Max 10")
+        }
+       
    
     }
 
