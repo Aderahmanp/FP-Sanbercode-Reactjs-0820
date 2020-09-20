@@ -36,3 +36,92 @@
     transform: rotate(360deg);
   }
 }
+
+.margin-login{
+  margin-left: 80% !important;
+}
+
+.card-img{
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.release-text{
+  color: lightslategray;
+  margin-top: 10px;
+}
+
+.Home-title{
+  font-weight: bold;
+  margin-top: 30px;
+}
+
+.margin-card{
+  margin-bottom: 10px !important;
+}
+
+.container {
+  width: 90%;
+  margin:auto;
+}
+
+.flex-detail{
+  display: flex;
+}
+
+.card-img-detail{
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  margin: 30px;
+}
+
+.button-detail{
+  margin-left: 30px;
+}
+
+.deskripsi-detail{
+  margin-top: 30px;
+}
+
+.year {
+  color: grey;
+}
+.card-img-table{
+  width: 70px;
+  height: 70px;
+}
+
+.flex-button{
+  display: flex;
+}
+
+.form-edit-movie{
+  width: 90%;
+  margin:30px;
+}
+
+.title-edit{
+  text-align: center;
+  font-size: x-large;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    width: 100%;
+    margin:auto;
+  }
+
+  .card-img-detail{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin: 30px;
+  }
+}
+
+.form-register{
+  width: 20rem;
+  margin: auto;
+}
