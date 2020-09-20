@@ -25,7 +25,7 @@ const Movie = ()=> {
            
         }
         // console.log(movie)
-    }, [games, setGames])
+    }, [games, id])
 
     
 

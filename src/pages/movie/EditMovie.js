@@ -24,7 +24,7 @@ const Movie = ()=> {
            
         }
         // console.log(movie)
-    }, [movie, setMovie])
+    }, [movie, id])
 
     
 

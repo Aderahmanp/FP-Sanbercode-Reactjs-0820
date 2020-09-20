@@ -13,7 +13,7 @@ const Game = ()=> {
     const [data, setData] = useState(null)
 
     useEffect(() => {
-        if (data === null) {
+        if (data == null) {
             axios.get(`https://backendexample.sanbersy.com/api/data-game/${id}`)
             .then(res => {
                 setData(res.data)
@@ -22,9 +22,11 @@ const Game = ()=> {
                 console.log(err)
             })
            
+        } else {
+            console.log("something wrong")
         }
         console.log(data)
-    }, [data, setData])
+    }, [data, id])
 
 
     return (

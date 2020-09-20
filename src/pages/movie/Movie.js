@@ -22,7 +22,7 @@ const Movie = ()=> {
                console.log(err)
               });
         }
-    }, [data]);
+    }, [data, id]);
 
 
     return (
